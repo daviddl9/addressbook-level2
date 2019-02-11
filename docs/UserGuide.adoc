@@ -67,6 +67,13 @@ Examples:
 * `add John Doe p/98765432 e/johnd@gmail.com a/John street, block 123, #01-01`
 * `add Betsy Crowe pp/1234567 e/betsycrowe@gmail.com pa/Newgate Prison t/criminal t/friend`
 
+[TIP]
+====
+The name should only have alphabetic characters and spaces. The phone number should only consist of digits.
+The email address has to be entered in the appropriate format: `email@domain.com`. Following this tip can help prevent
+the program from raising an exception.
+====
+
 == Listing all persons : `list`
 
 Shows a list of all persons, along with their non-private details, in the address book. +

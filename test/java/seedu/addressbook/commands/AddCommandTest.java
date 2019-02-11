@@ -22,11 +22,13 @@ import seedu.addressbook.data.person.Person;
 import seedu.addressbook.data.person.Phone;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.data.person.UniquePersonList;
+import seedu.addressbook.data.tag.Tag;
 import seedu.addressbook.util.TestUtil;
 
 public class AddCommandTest {
     private static final List<ReadOnlyPerson> EMPTY_PERSON_LIST = Collections.emptyList();
     private static final Set<String> EMPTY_STRING_SET = Collections.emptySet();
+    private static final Set<Tag> EMPTY_TAG_SET = Collections.emptySet();
 
     @Test
     public void addCommand_invalidName_throwsException() {
@@ -39,7 +41,9 @@ public class AddCommandTest {
 
     @Test
     public void addCommand_invalidPhone_throwsException() {
-        final String[] invalidNumbers = { "", " ", "1234-5678", "[]\\[;]", "abc", "a123", "+651234" };
+        final String[] invalidNumbers = { "", " ", "1234-5678", "[]\\[;]",
+            "abc", "a123", "+651234", "9123 1234", "812 123 124",
+            "123-123-123"};
         for (String number : invalidNumbers) {
             assertConstructingInvalidAddCmdThrowsException(Name.EXAMPLE, number, false, Email.EXAMPLE, true,
                     Address.EXAMPLE, false, EMPTY_STRING_SET);
@@ -112,6 +116,7 @@ public class AddCommandTest {
         assertTrue(p.getAddress().isPrivate());
         boolean isTagListEmpty = !p.getTags().iterator().hasNext();
         assertTrue(isTagListEmpty);
+        assertEquals(p.getTags(), EMPTY_TAG_SET);
     }
 
     @Test

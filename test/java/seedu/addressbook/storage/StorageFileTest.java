@@ -60,7 +60,6 @@ public class StorageFileTest {
         AddressBook expectedAB = getTestAddressBook();
 
         // ensure loaded AddressBook is properly constructed with test data
-        // TODO: overwrite equals method in AddressBook class and replace with equals method below
         assertEquals(actualAB.getAllPersons(), expectedAB.getAllPersons());
     }
 
