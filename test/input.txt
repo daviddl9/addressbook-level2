@@ -50,6 +50,8 @@
   list
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
   list
+  add Valid-Name p/12345 e/valid@email.com a/alice in wonderland
+  add Valid'Name p/12398 e/testValidname@gmail.com a/valid address
 
   # should not allow adding duplicate persons
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
