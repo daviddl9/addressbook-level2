@@ -69,9 +69,9 @@ Examples:
 
 [TIP]
 ====
-The name should only have alphabetic characters and spaces. The phone number should only consist of digits.
-The email address has to be entered in the appropriate format: `email@domain.com`. Following this tip can help prevent
-the program from raising an exception.
+The name should only have alphabetic characters, hypens, dashes and spaces. The entered phone number should consist only
+ of digits. The email address has to be entered in the appropriate format: `email@domain.com`. The program will throw an
+ exception if the data entered is not in the correct format.
 ====
 
 == Listing all persons : `list`
