@@ -105,8 +105,6 @@ public class AddCommandTest {
                 Address.EXAMPLE, true, EMPTY_STRING_SET);
         ReadOnlyPerson p = command.getPerson();
 
-        // TODO: add comparison of tags to person.equals and equality methods to
-        // individual fields that compare privacy to simplify this
         assertEquals(Name.EXAMPLE, p.getName().fullName);
         assertEquals(Phone.EXAMPLE, p.getPhone().value);
         assertTrue(p.getPhone().isPrivate());
